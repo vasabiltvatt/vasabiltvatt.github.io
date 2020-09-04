@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../extras/Fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Suissnord;
+    src: url("../extras/Fonts/suissnord/Suissnord.otf") format("opentype");
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
