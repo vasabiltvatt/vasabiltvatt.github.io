@@ -1,31 +1,20 @@
-//Set up function to async fetch modules from html template folder
+asyncModuleFetcher("bodyContainer", "startpage");
 
-asyncModuleFetcher = (container, module) => {
+var headerContainer = document.getElementById("headerContainer");
+var bodyContainer = document.getElementById("bodyContainer");
 
-    if(container == undefined || module == undefined) {
-        return "Parent container or module not specified";
+var hamburgerMenu = document.getElementById("hamburgerMenu");
+var hamburgerBtn = document.getElementsByClassName("hamburgerMenu")[0];
+
+hamburgerBtn.addEventListener("click", () => {
+    switch (hamburgerMenu.getAttribute("class")) {
+        case null:
+            hamburgerMenu.setAttribute("class", "open");
+            document.body.setAttribute("style", "margin:unset;background:rgba(78,78,78,0.7)");
+            break;
+        case "open":
+            hamburgerMenu.removeAttribute("class");
+            document.body.setAttribute("style", "margin:unset;");
+            break;
     }
-    else {
-
-        if(window.XMLHttpRequest) {
-            xmlHttp = new XMLHttpRequest();
-        }
-        else {
-            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-
-        xmlHttp.onreadystatechange = function() {
-            if(this.readyState == 4 && this.status == 200) {
-
-                let containerElement = document.getElementById(container);
-                containerElement.innerHTML = this.responseText;
-
-            }
-        };
-
-        xmlHttp.open("GET", "html/" + module + ".html");
-        xmlHttp.send(null);
-
-    }
-
-};
+});
