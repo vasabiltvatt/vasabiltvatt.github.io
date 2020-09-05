@@ -1,3 +1,5 @@
 {
-
+  "Startsida": "html/startpage.html",
+  "Tjänster": "html/services.html",
+  "Kontakta Oss": "html/contact.html"
 }

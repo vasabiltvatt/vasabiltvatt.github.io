@@ -21,4 +21,20 @@ hamburgerCloseBtn.addEventListener("click", () => {
     hamburgerMenu.removeAttribute("class");
 });
 
-asyncModuleFetcher("")
+dirContentFetcher("navBarDirContent.json", menuDirContent => {
+    var pair = Object.entries(menuDirContent);
+    console.log(pair);
+    for(var i = 0; pair.length > i; i++) {
+
+        var clickableP = document.createElement("p");
+        clickableP.innerText = pair[i][0];
+
+        clickableP.addEventListener("click", function (i) {
+            asyncModuleFetcher(bodyContainer, pair[i][1]);
+            hamburgerMenu.removeAttribute("class");
+        }.bind(null, i));
+
+        hamburgerContentContainer.appendChild(clickableP);
+
+    }
+});

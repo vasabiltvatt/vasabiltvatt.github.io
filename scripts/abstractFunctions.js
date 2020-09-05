@@ -28,3 +28,29 @@ asyncModuleFetcher = (container, module) => {
     }
 
 };
+
+dirContentFetcher = (target, callback) => {
+    if(target == undefined) {
+        return "Target not specified";
+    }
+    else {
+
+        if(window.XMLHttpRequest) {
+            xmlHttp = new XMLHttpRequest();
+        }
+        else {
+            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        xmlHttp.onreadystatechange = function() {
+            if(this.readyState == 4 && this.status == 200) {
+                callback(JSON.parse(this.responseText));
+            }
+        };
+
+        xmlHttp.open("GET", "modules/jsonDirSchema/" + target);
+        xmlHttp.send(null);
+
+    }
+};
+

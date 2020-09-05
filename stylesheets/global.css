@@ -84,6 +84,19 @@ body {
     background: #e2e2e2;
 }
 
+#hamburgerMenu .contentContainer {
+    width: 96%;
+    margin-top: 100px;
+    font-size: 2em;
+    text-decoration: underline;
+    font-family: Suissnord;
+    text-align: center;
+}
+
+#hamburgerMenu .contentContainer p {
+
+}
+
 #bodyContainer {
     padding-top: -moz-calc(100px + 4%);
     padding-top: -webkit-calc(100px + 4%);
