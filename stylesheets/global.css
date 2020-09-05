@@ -94,12 +94,27 @@ body {
 }
 
 #hamburgerMenu .contentContainer p {
-
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 #bodyContainer {
+    height: 100vh;
     padding-top: -moz-calc(100px + 4%);
     padding-top: -webkit-calc(100px + 4%);
     padding-top: calc(100px + 4%);
+}
 
+#bodyContainer h1 {
+    padding: 0 5%;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+#bodyContainer hr {
+    width: 90%;
+    border: 1px solid black;
 }
