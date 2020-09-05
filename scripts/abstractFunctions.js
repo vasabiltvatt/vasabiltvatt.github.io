@@ -18,6 +18,10 @@ asyncModuleFetcher = (container, module) => {
             if(this.readyState == 4 && this.status == 200) {
 
                 container.innerHTML = this.responseText;
+                var scripts = container.getElementsByTagName("script");
+                for(var i=0; scripts.length > i; i++ ) {
+                    eval(scripts[i].innerText);
+                }
 
             }
         };
