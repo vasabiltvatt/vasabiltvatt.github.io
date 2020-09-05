@@ -1,4 +1,4 @@
-//Set up function to async fetch modules from html template folder
+//Set up function to async fetch modules from modules template folder
 
 asyncModuleFetcher = (container, module) => {
 
@@ -17,13 +17,12 @@ asyncModuleFetcher = (container, module) => {
         xmlHttp.onreadystatechange = function() {
             if(this.readyState == 4 && this.status == 200) {
 
-                let containerElement = document.getElementById(container);
-                containerElement.innerHTML = this.responseText;
+                container.innerHTML = this.responseText;
 
             }
         };
 
-        xmlHttp.open("GET", "html/" + module + ".html");
+        xmlHttp.open("GET", "modules/" + module);
         xmlHttp.send(null);
 
     }

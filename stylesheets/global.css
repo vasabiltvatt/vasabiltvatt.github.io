@@ -83,3 +83,10 @@ body {
     margin-top: 20px;
     background: #e2e2e2;
 }
+
+#bodyContainer {
+    padding-top: -moz-calc(100px + 4%);
+    padding-top: -webkit-calc(100px + 4%);
+    padding-top: calc(100px + 4%);
+
+}
