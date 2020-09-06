@@ -14,10 +14,12 @@ var hamburgerOpenBtn = document.getElementsByClassName("hamburgerMenu")[0];
 var hamburgerCloseBtn = document.getElementsByClassName("closeBtn")[0];
 
 hamburgerOpenBtn.addEventListener("click", () => {
+    hamburgerMenu.removeAttribute("style");
     hamburgerMenu.setAttribute("class", "open");
 });
 
 hamburgerCloseBtn.addEventListener("click", () => {
+    hamburgerMenu.setAttribute("style", "visibility:hidden;opacity:0");
     hamburgerMenu.removeAttribute("class");
 });
 
