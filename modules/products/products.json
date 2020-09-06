@@ -1,8 +1,8 @@
 {
-  "Title": [],
-  "Price": [],
-  "Imgs": [],
-  "sDescription": [],
-  "lDescription": [],
-  "Availability": []
+  "Title": ["${title}"],
+  "Price": ["${price}"],
+  "Imgs": [["${imgs}"]],
+  "sDescription": ["${sDesc}"],
+  "lDescription": ["${lDesc}"],
+  "Availability": ["${avail}"]
 }

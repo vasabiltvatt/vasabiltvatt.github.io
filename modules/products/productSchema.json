@@ -1,0 +1,10 @@
+{
+  "services": {
+    "linker": "services.json",
+    "title": "Vi erbjuder..."
+  },
+  "products": {
+    "linker": "products.json",
+    "title": "Vårt sortiment"
+  }
+}

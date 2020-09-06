@@ -1,9 +1,9 @@
 {
-  "Title": [],
-  "Price": [],
-  "Imgs": [],
-  "sDescription": [],
-  "lDescription": [],
-  "Time" : [],
-  "Availability": []
+  "Title": ["${title}"],
+  "Price": ["${price}"],
+  "imgs" : [["${imgs}"]],
+  "sDescription": ["${sDesc}"],
+  "lDescription": ["${lDesc}"],
+  "Time" : ["${time}"],
+  "Availability": ["${avail}"]
 }

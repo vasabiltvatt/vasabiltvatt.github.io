@@ -110,7 +110,6 @@ body {
 }
 
 #bodyContainer {
-    height: 100vh;
     padding-top: -moz-calc(100px + 4%);
     padding-top: -webkit-calc(100px + 4%);
     padding-top: calc(100px + 4%);
@@ -120,4 +119,12 @@ body {
     padding: 0 5%;
     font-size: 1.7em;
     text-align: center;
+}
+
+#footerContainer {
+    height: 50vh;
+    background: #1c1c1c;
+    -webkit-box-shadow: 0 2px 14px 1px #000;
+    -moz-box-shadow: 0 2px 14px 1px #000;
+    box-shadow: 0 2px 14px 1px #000;
 }

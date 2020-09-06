@@ -1,11 +1,13 @@
 var headerContainer = document.getElementById("headerContainer");
 var bodyContainer = document.getElementById("bodyContainer");
+var footerContainer = document.getElementById("footerContainer");
 var logoContainer = document.getElementById("logo");
 
-asyncModuleFetcher(bodyContainer, "html/startpage.html");
+asyncModuleFetcher(bodyContainer, "html/body/startpage.html");
+asyncModuleFetcher(footerContainer, "html/footer/footer.html");
 
 logoContainer.addEventListener("click", () => {
-    asyncModuleFetcher(bodyContainer, "html/startpage.html");
+    asyncModuleFetcher(bodyContainer, "html/body/startpage.html");
 });
 
 var hamburgerMenu = document.getElementById("hamburgerMenu");
