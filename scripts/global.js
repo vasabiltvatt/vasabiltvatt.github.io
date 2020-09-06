@@ -32,6 +32,7 @@ schemaLoader("jsonDirSchema/navBarDirContent.json", menuDirContent => {
 
         clickableP.addEventListener("click", function (i) {
             asyncModuleFetcher(bodyContainer, pair[i][1]);
+            hamburgerMenu.setAttribute("style", "visibility:hidden;opacity:0");
             hamburgerMenu.removeAttribute("class");
         }.bind(null, i));
 
