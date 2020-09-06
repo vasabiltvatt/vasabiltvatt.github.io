@@ -23,7 +23,6 @@ hamburgerCloseBtn.addEventListener("click", () => {
 
 dirContentFetcher("navBarDirContent.json", menuDirContent => {
     var pair = Object.entries(menuDirContent);
-    console.log(pair);
     for(var i = 0; pair.length > i; i++) {
 
         var clickableP = document.createElement("p");
