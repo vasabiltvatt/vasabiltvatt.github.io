@@ -113,8 +113,3 @@ body {
     font-size: 1.7em;
     text-align: center;
 }
-
-#bodyContainer hr {
-    width: 90%;
-    border: 1px solid black;
-}
