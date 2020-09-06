@@ -21,7 +21,7 @@ hamburgerCloseBtn.addEventListener("click", () => {
     hamburgerMenu.removeAttribute("class");
 });
 
-dirContentFetcher("navBarDirContent.json", menuDirContent => {
+schemaLoader("jsonDirSchema/navBarDirContent.json", menuDirContent => {
     var pair = Object.entries(menuDirContent);
     for(var i = 0; pair.length > i; i++) {
 

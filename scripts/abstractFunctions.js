@@ -33,7 +33,7 @@ asyncModuleFetcher = (container, module) => {
 
 };
 
-dirContentFetcher = (target, callback) => {
+schemaLoader = (target, callback) => {
     if(target == undefined) {
         return "Target not specified";
     }
@@ -52,7 +52,7 @@ dirContentFetcher = (target, callback) => {
             }
         };
 
-        xmlHttp.open("GET", "modules/jsonDirSchema/" + target);
+        xmlHttp.open("GET", "modules/" + target);
         xmlHttp.send(null);
 
     }
