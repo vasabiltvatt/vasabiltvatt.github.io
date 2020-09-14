@@ -8,6 +8,7 @@ asyncModuleFetcher(footerContainer, "html/footer/footer.html");
 
 logoContainer.addEventListener("click", () => {
     asyncModuleFetcher(bodyContainer, "html/body/startpage.html");
+    asyncModuleFetcher(footerContainer, "html/footer/footer.html");
 });
 
 var hamburgerMenu = document.getElementById("hamburgerMenu");
@@ -41,4 +42,11 @@ schemaLoader("jsonDirSchema/navBarDirContent.json", menuDirContent => {
         hamburgerContentContainer.appendChild(clickableP);
 
     }
+});
+
+window.addEventListener("load", () => {
+    var openingTimes = document.getElementsByClassName("openingTimes")[0].getElementsByTagName("p");
+    var date = new Date();
+
+    openingTimes[date.getDay()-1].setAttribute("class", "highlightedDay");
 });
