@@ -5,11 +5,9 @@ var logoContainer = document.getElementById("logo");
 var navBar = document.getElementsByClassName("nav")[0];
 
 asyncModuleFetcher(bodyContainer, "html/body/startpage.html");
-asyncModuleFetcher(footerContainer, "html/footer/footer.html");
 
 logoContainer.addEventListener("click", () => {
     asyncModuleFetcher(bodyContainer, "html/body/startpage.html");
-    asyncModuleFetcher(footerContainer, "html/footer/footer.html");
 });
 
 var hamburgerMenu = document.getElementById("hamburgerMenu");
@@ -28,6 +26,31 @@ hamburgerCloseBtn.addEventListener("click", () => {
     hamburgerMenu.removeAttribute("class");
     document.body.removeAttribute("style");
 });
+
+(function areWeOpen() {
+    var openingTimes = document.getElementsByClassName("openingTimes")[0].getElementsByTagName("p");
+    var currDate = new Date();
+    var currDay = openingTimes[currDate.getDay()-1];
+    var openingDate = new Date();
+
+    currDay.setAttribute("class", "highlightedDay");
+
+    if(0 < currDate.getDay() < 6) {
+        openingDate.setHours(18, 00);
+        if(currDate > openingDate) {
+            currDay.setAttribute("style", "background:#f00");
+        }
+    }
+    else if(currDate.getDay() == 6) {
+        openingDate.setHours(16, 00);
+        if(currDate > openingDate) {
+            currDay.setAttribute("style", "background:#f00");
+        }
+    }
+    else {
+        currDay.setAttribute("style", "background:#f00");
+    }
+})();
 
 window.addEventListener("scroll", () => {
     if(window.pageYOffset > 200) {

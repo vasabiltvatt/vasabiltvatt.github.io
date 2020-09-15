@@ -166,6 +166,15 @@ body {
     text-decoration: unset;
 }
 
+.footerContent {
+    padding: 4%;
+    color: #e2e2e2;
+}
+
+.footerContent h1 {
+    font-size: 1.4em;
+}
+
 .openingTimes p {
     padding: 1% 4%;
 }

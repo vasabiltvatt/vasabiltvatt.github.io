@@ -2,5 +2,5 @@
   "Startsida": "html/body/startpage.html",
   "Tjänster": "html/services.html",
   "Produkter": "html/products.html",
-  "Kontakta Oss": "html/contact.html"
+  "Kontakta Oss": "html/pages/contact.html"
 }
