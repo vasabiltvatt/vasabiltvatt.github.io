@@ -2,6 +2,7 @@ var headerContainer = document.getElementById("headerContainer");
 var bodyContainer = document.getElementById("bodyContainer");
 var footerContainer = document.getElementById("footerContainer");
 var logoContainer = document.getElementById("logo");
+var navBar = document.getElementsByClassName("nav")[0];
 
 asyncModuleFetcher(bodyContainer, "html/body/startpage.html");
 asyncModuleFetcher(footerContainer, "html/footer/footer.html");
@@ -19,11 +20,29 @@ var hamburgerCloseBtn = document.getElementsByClassName("closeBtn")[0];
 hamburgerOpenBtn.addEventListener("click", () => {
     hamburgerMenu.removeAttribute("style");
     hamburgerMenu.setAttribute("class", "open");
+    document.body.setAttribute("style", "overflow:hidden");
 });
 
 hamburgerCloseBtn.addEventListener("click", () => {
     hamburgerMenu.setAttribute("style", "visibility:hidden;opacity:0");
     hamburgerMenu.removeAttribute("class");
+    document.body.removeAttribute("style");
+});
+
+window.addEventListener("scroll", () => {
+    if(window.pageYOffset > 200) {
+        if(headerContainer.getAttribute("class") == undefined) {
+            headerContainer.setAttribute("class", "flexed");
+            navBar.setAttribute("class", "nav flexed");
+            hamburgerOpenBtn.setAttribute("class", "hamburgerMenu flexed");
+        }
+
+    }
+    else {
+        headerContainer.removeAttribute("class");
+        navBar.setAttribute("class", "nav");
+        hamburgerOpenBtn.setAttribute("class", "hamburgerMenu");
+    }
 });
 
 schemaLoader("jsonDirSchema/navBarDirContent.json", menuDirContent => {
